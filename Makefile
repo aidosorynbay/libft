@@ -6,11 +6,15 @@
 #    By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 12:44:04 by aorynbay          #+#    #+#              #
-#    Updated: 2024/06/26 16:20:05 by aorynbay         ###   ########.fr        #
+#    Updated: 2024/06/26 23:12:51 by aorynbay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # how to test cases memmove?
+# remake strlcat
+# check memchr
+# check strlcat & strlcpy
+# check strnstr
 
 SRCS = 	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_memchr.c ft_memcmp.c \

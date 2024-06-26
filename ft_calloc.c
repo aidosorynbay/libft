@@ -6,18 +6,24 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:14:46 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/25 19:47:19 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/26 23:17:29 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void *ft_calloc(size_t nmemb, size_t size)
 {
 	char *result;
 
-	result = malloc(count * size);
+	result = malloc(nmemb * size);
 
+	if (nmemb * size == 0 && result == NULL)
+	{
+		return NULL;
+	}
+	
+	result = ft_memset(result, '0', nmemb * size);
 	return result;
 }
 

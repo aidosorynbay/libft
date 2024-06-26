@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 15:36:24 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/26 15:06:47 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/26 23:12:13 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,9 +37,10 @@ int	ft_atoi(char *str)
 	return result * sign;
 }
 
-#include <stdio.h>
-int	main(void)
-{
-	char str[] = "	 -453";
-	printf("%i", ft_atoi(str));
-}
+// #include <stdio.h>
+// int	main(void)
+// {
+// 	char str[] = "	 -453";
+// 	printf("%i\n", ft_atoi(str));
+// 	printf("%i\n", atoi(str));
+// }

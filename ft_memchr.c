@@ -6,40 +6,42 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:16:44 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/25 19:47:18 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/26 22:32:49 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memchr(const void *s, int c, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char *str;
-	str = (char *)s;
-	size_t i = 0;
+	char*	str;
+	size_t 	i;
 
-	str = (char *)s;
-	while (str[i] != '\0' && str[i] != (char)c && i < n)
+	str = (char*)s;
+	i = 0;
+	while (i < n)
 	{
+		if (str[i] == (char)c)
+		{
+			return str + i;
+		}
 		i++;
 	}
 	
-	if (str[i] == '\0' || i >= n)
-	{
-		return NULL;
-	}
-	else
-	{
-		return str + i;
-	}
+	return NULL;
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int	main(void)
 // {
-// 	char str[] = "https://www.tutorialspoint.com";
-// 	char ch = '.';
-// 	char *res = ft_memchr(str, ch, 12);
-	
+// 	char str1[] = "https://www.tutorialspoint.com";
+// 	char ch1 = '.';
+// 	char *res = ft_memchr(str1, ch1, 30);
 // 	printf("%s\n", res);
+	
+// 	char str2[] = "https://www.tutorialspoint.com";
+// 	char ch2 = '.';
+// 	char *res1 = (char *)memchr(str2, ch2, 30);
+// 	printf("%s\n", res1);
 // }

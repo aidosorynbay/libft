@@ -6,13 +6,13 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 15:10:31 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/25 19:47:14 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/26 20:31:21 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(char *s1, char *s2, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
 
@@ -30,10 +30,11 @@ int	ft_strncmp(char *s1, char *s2, size_t n)
 }
 
 // #include <stdio.h>
+// #include <string.h>
 // int	main(void)
 // {
-// 	char s1[] = "yooddf";
-// 	char s2[] = "yood";
-// 	int a = ft_strncmp(s1, s2, 6);
-// 	printf("%i", a);
+// 	char s1[] = "a";
+// 	char s2[] = "";
+// 	printf("%i\n", ft_strncmp(s1, s2, 6));
+// 	printf("%i\n", strncmp(s1, s2, 6));
 // }

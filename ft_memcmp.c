@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:35:42 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/25 19:47:18 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/26 23:10:07 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	str1 = (char *)s1;
 	str2 = (char *)s2;
 
+	if (n == 0)
+	{
+		return 0;
+	}
 	while ((str1[i] != '\0' || str2[i] != '\0') && i < n)
 	{
 		if (str1[i] != str2[i])
@@ -33,11 +37,12 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return 0;
 }
 
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char s1[] = "yooz";
-// 	char s2[] = "yood";
-// 	int a = ft_memcmp(s1, s2, 4);
-// 	printf("%i", a);
-// }
+#include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char s1[] = "b";
+	char s2[] = "";
+	printf("%i\n", ft_memcmp(s1, s2, 1));
+	printf("%i\n", memcmp(s1, s2, 1));
+}
