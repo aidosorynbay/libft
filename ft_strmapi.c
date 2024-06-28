@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/28 15:16:18 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:16:43 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/06/28 15:08:20 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/06/28 18:35:42 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalnum(int c)
-{
-	if (((char)c >= 'a' && (char)c <= 'z')
-		|| ((char)c >= 'A' && (char)c <= 'Z')
-		|| ((char)c >= '0' && (char)c <= '9'))
-	{
-		return (1);
-	}
-	return (0);
-}
-
-// #include <stdio.h>
-// #include <ctype.h>
-// int	main(void)
+// char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // {
-// 	int c = 'D';
-// 	printf("%i\n", ft_isalnum(c));
-// 	printf("%i\n", isalnum(c));
+	
 // }

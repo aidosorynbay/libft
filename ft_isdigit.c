@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:23:33 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/26 15:28:00 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:15:28 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,10 @@ int	ft_isdigit(int c)
 {
 	if ((char)c >= '0' && (char)c <= '9')
 	{
-		return 1;
+		return (1);
 	}
-	return 0;
+	return (0);
 }
-
 
 // #include <stdio.h>
 // #include <ctype.h>

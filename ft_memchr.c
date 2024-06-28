@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 16:16:44 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/26 22:32:49 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:29:00 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	char*	str;
-	size_t 	i;
+	char	*str;
+	size_t	i;
 
-	str = (char*)s;
+	str = (char *)s;
 	i = 0;
 	while (i < n)
 	{
 		if (str[i] == (char)c)
 		{
-			return str + i;
+			return (str + i);
 		}
 		i++;
 	}
-	
-	return NULL;
+	return (NULL);
 }
 
 // #include <stdio.h>
@@ -39,7 +38,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 // 	char ch1 = '.';
 // 	char *res = ft_memchr(str1, ch1, 30);
 // 	printf("%s\n", res);
-	
+
 // 	char str2[] = "https://www.tutorialspoint.com";
 // 	char ch2 = '.';
 // 	char *res1 = (char *)memchr(str2, ch2, 30);

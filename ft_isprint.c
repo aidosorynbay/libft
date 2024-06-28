@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:40:07 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/26 15:43:41 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:17:27 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_isprint(int c)
 {
 	if ((char)c >= 32 && (char)c <= 126)
 	{
-		return 1;
+		return (1);
 	}
-	return 0;
+	return (0);
 }
 
 // #include <stdio.h>

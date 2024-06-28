@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:58:26 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/26 19:56:51 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/28 15:26:28 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,26 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char *str;
-	int i = 0;
+	char	*str;
+	int		i;
 
 	str = (char *)s;
+	i = 0;
 	while (s[i] != '\0' && s[i] != (char)c)
 	{
 		i++;
 	}
-
 	if (c == '\0')
 	{
-		return str + i;
+		return (str + i);
 	}
-	
 	if (s[i] == '\0')
 	{
-		return NULL;
+		return (NULL);
 	}
 	else
 	{
-		return str + i;
+		return (str + i);
 	}
 }
 
@@ -44,6 +43,6 @@ char	*ft_strchr(const char *s, int c)
 // 	char str[] = "https://www.tutorialspoint.com";
 // 	char ch = 'v';
 // 	char *res = ft_strchr(str, ch);
-	
+
 // 	printf("|%s|\n", res);
 // }

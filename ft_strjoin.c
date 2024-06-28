@@ -12,40 +12,36 @@
 
 #include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-    char    *result;
+	char	*result;
 	int		i;
 	int		j;
 
-    result = malloc(sizeof(s1) + sizeof(s2));
+	result = malloc(sizeof(s1) + sizeof(s2));
 	i = 0;
 	j = 0;
 	if (result == NULL)
 	{
-		return NULL;
+		return (NULL);
 	}
 	while (s1[j] != '\0')
 	{
-		result[i] = s1[j];
-		i++;
-		j++;
+		result[i++] = s1[j++];
 	}
 	j = 0;
 	while (s2[j] != '\0')
 	{
-		result[i] = s2[j];
-		i++;
-		j++;
+		result[i++] = s2[j++];
 	}
 	result[i] = '\0';
-	return result;
+	return (result);
 }
 
-#include <stdio.h>
-int main(void)
-{
-    char str1[] = "combine";
-    char str2[] = " this";
-    printf("%s\n", ft_strjoin(str1, str2));
-}
+// #include <stdio.h>
+// int main(void)
+// {
+//     char str1[] = "combine";
+//     char str2[] = " this";
+//     printf("%s\n", ft_strjoin(str1, str2));
+// }
