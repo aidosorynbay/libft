@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:14:01 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:32:33 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/06/28 18:47:24 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	char	*result;
 	int		i;
 
-	result = malloc(sizeof(s));
+	result = malloc(sizeof(char) * (ft_strlen(s) + 1));
 	i = 0;
 	if (result == NULL)
 	{
