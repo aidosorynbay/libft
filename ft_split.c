@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 10:44:54 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 12:25:46 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 17:50:12 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,13 +107,15 @@ char	**ft_split(char const *s, char c)
 	char	**result;
 	int		c_count;
 
+	if (!c)
+		return NULL;
 	c_count = sep_count(s, c);
 	result = malloc(sizeof(char *) * c_count + 1);
-	result[c_count + 1] = NULL;
 	if (result == NULL)
 	{
 		return (NULL);
 	}
+	result[c_count + 1] = NULL;
 	result = malloc_for_each_str(result, s, c);
 	result = allocate_chars(result, s, c);
 	return (result);
@@ -122,8 +124,8 @@ char	**ft_split(char const *s, char c)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char str[] = "splitzthesezwordszapartzpls";
-// 	char sep = 'z';
+// 	char str[] = "ckfsclkslckajfic";
+// 	char sep = 'c';
 // 	char **arr;
 
 // 	arr = ft_split(str, sep);

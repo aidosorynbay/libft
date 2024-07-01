@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:14:46 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:31:45 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 18:10:21 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	char	*result;
+	size_t	prod;
 
-	result = malloc(nmemb * size);
-	if (nmemb * size == 0 && result == NULL)
+	prod = nmemb * size;
+	if (nmemb * size == 0 && (prod / nmemb != size))
 	{
 		return (NULL);
 	}
-	result = ft_memset(result, '0', nmemb * size);
+	result = malloc(nmemb * size);
+	if (result == NULL)
+	{
+		return (NULL);
+	}
+	result = ft_memset(result, 0, nmemb * size);
 	return (result);
 }
 

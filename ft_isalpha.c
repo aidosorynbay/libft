@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:07:22 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:15:06 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:05:30 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 int	ft_isalpha(int c)
 {
-	if (((char)c >= 'a' && (char)c <= 'z')
-		|| ((char)c >= 'A' && (char)c <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:52:06 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:20:32 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 18:12:47 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,10 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	size_t	i;
 
 	i = 0;
+	if (dst == NULL && src == NULL)
+	{
+		return (NULL);
+	}
 	while (i < n)
 	{
 		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
@@ -29,15 +33,15 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 // #include <string.h>
 // int	main(void)
 // {
-// 	char str1[] = "Geerw";
-//     char str2[] = "Fulks";
+// 	char *str1 = NULL;
+//     char *str2 = NULL;
 
-// 	ft_memcpy(str1, str2, 5);
+// 	memcpy(str1, str2, 2);
 // 	printf("%s\n", str1);
 
-// 	char strr1[] = "Geerw";
-//     char strr2[] = "Fulks";
+// 	char *strr1 = NULL;
+//     char *strr2 = NULL;
 
-// 	ft_memcpy(strr1, strr2, 5);
+// 	ft_memcpy(strr1, strr2, 2);
 // 	printf("%s\n", strr1);
 // }

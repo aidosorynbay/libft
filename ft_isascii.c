@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/26 15:30:23 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:17:10 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:23:03 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isascii(int c)
 {
-	if ((unsigned char)c < 128)
+	if (c >= 0 && c < 128)
 	{
 		return (1);
 	}

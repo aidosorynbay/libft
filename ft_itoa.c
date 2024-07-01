@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 12:24:12 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:00:19 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/01 15:34:35 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ static char	*int_to_str(char *result, int n, int count)
 static char	*max_neg(char *result)
 {
 	result = malloc(sizeof(char) * 12);
+	result = check_memall(result);
 	result[0] = '-';
 	result[1] = '2';
 	result[2] = '1';
@@ -93,6 +94,7 @@ char	*ft_itoa(int n)
 	if (n == 0)
 	{
 		result = malloc(sizeof(char) * 2);
+		result = check_memall(result);
 		result[0] = '0';
 		result[1] = '\0';
 		return (result);
@@ -100,7 +102,6 @@ char	*ft_itoa(int n)
 	else if (n == -2147483648)
 	{
 		result = max_neg(result);
-		result = check_memall(result);
 		return (result);
 	}
 	result = memall(result, n, &count);
