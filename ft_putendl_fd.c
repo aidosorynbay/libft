@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 14:58:26 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 20:34:34 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/07/02 18:38:08 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/07/02 18:42:23 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*str;
-	int		i;
+	int	i;
 
-	str = (char *)s;
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
 		i++;
-	if (s[i] == (char)c)
-		return (str + i);
-	return (NULL);
+	}
+	write(fd, "\n", 1);
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char str[] = "https://www.tutorialspoint.com";
-// 	char ch = 'v';
-// 	char *res = ft_strchr(str, ch);
-
-// 	printf("|%s|\n", res);
-// }

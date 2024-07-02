@@ -1,37 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 14:58:26 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 20:34:34 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/07/02 18:42:49 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/07/02 20:36:52 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*str;
-	int		i;
+	char	c;
 
-	str = (char *)s;
-	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
-		i++;
-	if (s[i] == (char)c)
-		return (str + i);
-	return (NULL);
+	c = '\0';
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
+	if (n < 0)
+	{
+		write (fd, "-", 1);
+		n = -n;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+	}
+	c = n % 10 + '0';
+	write (fd, &c, 1);
 }
 
-// #include <stdio.h>
 // int	main(void)
 // {
-// 	char str[] = "https://www.tutorialspoint.com";
-// 	char ch = 'v';
-// 	char *res = ft_strchr(str, ch);
-
-// 	printf("|%s|\n", res);
+// 	int a = -2147483648;
+// 	ft_putnbr_fd(a, 1);
 // }

@@ -1,37 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/25 14:58:26 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 20:34:34 by aorynbay         ###   ########.fr       */
+/*   Created: 2024/07/02 17:24:54 by aorynbay          #+#    #+#             */
+/*   Updated: 2024/07/02 17:31:53 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*str;
-	int		i;
+	int	i;
 
-	str = (char *)s;
 	i = 0;
-	while (s[i] != '\0' && s[i] != (char)c)
+	while (s[i] != '\0')
+	{
+		f(i, &(s[i]));
 		i++;
-	if (s[i] == (char)c)
-		return (str + i);
-	return (NULL);
+	}
 }
-
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	char str[] = "https://www.tutorialspoint.com";
-// 	char ch = 'v';
-// 	char *res = ft_strchr(str, ch);
-
-// 	printf("|%s|\n", res);
-// }
