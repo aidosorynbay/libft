@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 10:44:54 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/01 17:50:12 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:02:50 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,10 @@ static char	**check_memall(char **arr, int i)
 	{
 		while (j < i)
 		{
-			free(arr[i]);
-			i++;
+			free(arr[j]);
+			j++;
 		}
+		free(arr);
 		return (NULL);
 	}
 	return (arr);
@@ -36,7 +37,6 @@ static char	**malloc_for_each_str(char **result, const char *s, char c)
 	int	k;
 
 	i = 0;
-	j = 0;
 	k = 0;
 	while (s[i] != '\0')
 	{
@@ -45,20 +45,21 @@ static char	**malloc_for_each_str(char **result, const char *s, char c)
 		else
 		{
 			j = 0;
-			while (s[i] != c && s[i] != '\0') // explain this
+			while (s[i] != c && s[i] != '\0')
 			{
 				j++;
 				i++;
 			}
 			result[k] = malloc(sizeof(char) * (j + 1));
-			result = check_memall(result, k);
+			if (check_memall(result, k) == NULL)
+				return (NULL);
 			k++;
 		}
 	}
 	return (result);
 }
 
-static int	sep_count(const char *s, char c)
+static int	ft_word_count(const char *s, char c)
 {
 	int	i;
 	int	count;
@@ -69,11 +70,21 @@ static int	sep_count(const char *s, char c)
 	{
 		if (s[i] == c)
 		{
-			count++;
+			while (s[i] == c)
+			{
+				i++;
+			}
 		}
-		i++;
+		else if (s[i] != '\0' && s[i] != c)
+		{
+			count++;
+			while (s[i] != '\0' && s[i] != c)
+			{
+				i++;
+			}
+		}
 	}
-	return (count + 1);
+	return (count);
 }
 
 static char	**allocate_chars(char **result, const char *s, char c)
@@ -105,18 +116,20 @@ static char	**allocate_chars(char **result, const char *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**result;
-	int		c_count;
+	int		word_count;
 
-	if (!c)
-		return NULL;
-	c_count = sep_count(s, c);
-	result = malloc(sizeof(char *) * c_count + 1);
+	if (!s)
+		return (NULL);
+	word_count = ft_word_count(s, c);
+	result = malloc(sizeof(char *) * (word_count + 1));
 	if (result == NULL)
+		return (NULL);
+	result[word_count] = NULL;
+	if (malloc_for_each_str(result, s, c) == NULL)
 	{
+		free(result);
 		return (NULL);
 	}
-	result[c_count + 1] = NULL;
-	result = malloc_for_each_str(result, s, c);
 	result = allocate_chars(result, s, c);
 	return (result);
 }
@@ -124,8 +137,8 @@ char	**ft_split(char const *s, char c)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char str[] = "ckfsclkslckajfic";
-// 	char sep = 'c';
+// 	char str[] = "      split       this for   me  !       ";
+// 	char sep = ' ';
 // 	char **arr;
 
 // 	arr = ft_split(str, sep);
@@ -135,4 +148,5 @@ char	**ft_split(char const *s, char c)
 // 		printf("|%s|", arr[i]);
 // 		i++;
 // 	}
+// 	printf("|%s|", arr[i]);
 // }

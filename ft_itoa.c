@@ -6,44 +6,28 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 12:24:12 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/01 15:34:35 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/02 16:29:32 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-
-static char	*check_memall(char *str)
-{
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	return (str);
-}
 
 static char	*memall(char *result, int n, int *count)
 {
-	if (n > 0)
-	{
-		while (n > 0)
-		{
-			(*count)++;
-			n = n / 10;
-		}
-		result = malloc(sizeof(char) * (*count + 1));
-		result = check_memall(result);
-		return (result);
-	}
-	n = -n;
-	while (n > 0)
+	int	tmp;
+
+	tmp = n;
+	if (n < 0)
 	{
 		(*count)++;
-		n = n / 10;
+		tmp = -n;
 	}
-	result = malloc(sizeof(char) * (*count + 2));
-	result = check_memall(result);
-	(*count)++;
+	while (tmp > 0)
+	{
+		(*count)++;
+		tmp = tmp / 10;
+	}
+	result = malloc(sizeof(char) * (*count + 1));
 	return (result);
 }
 
@@ -68,7 +52,8 @@ static char	*int_to_str(char *result, int n, int count)
 static char	*max_neg(char *result)
 {
 	result = malloc(sizeof(char) * 12);
-	result = check_memall(result);
+	if (result == NULL)
+		return (NULL);
 	result[0] = '-';
 	result[1] = '2';
 	result[2] = '1';
@@ -94,7 +79,8 @@ char	*ft_itoa(int n)
 	if (n == 0)
 	{
 		result = malloc(sizeof(char) * 2);
-		result = check_memall(result);
+		if (result == NULL)
+			return (NULL);
 		result[0] = '0';
 		result[1] = '\0';
 		return (result);
@@ -105,12 +91,15 @@ char	*ft_itoa(int n)
 		return (result);
 	}
 	result = memall(result, n, &count);
+	if (result == NULL)
+		return (NULL);
 	result = int_to_str(result, n, count);
 	return (result);
 }
 
+// #include <stdio.h>
 // int	main(void)
 // {
-// 	int n = -2147483647;
+// 	int n = -1234;
 // 	printf("|%s|\n", ft_itoa(n));
 // }

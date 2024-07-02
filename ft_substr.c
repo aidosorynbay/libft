@@ -22,16 +22,14 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	length = 0;
 	if (start >= ft_strlen(s))
 		return (ft_strdup(""));
-	if (length < len)
+	if (ft_strlen(s) < len)
 		length = ft_strlen(s) - start;
 	else
 		length = len;
 	result = malloc(sizeof(char) * (length + 1));
 	if (result == NULL)
-	{
 		return (NULL);
-	}
-	while (len > 0)
+	while (len > 0 && s[start] != '\0')
 	{
 		result[i] = s[start];
 		start++;

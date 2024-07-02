@@ -6,16 +6,12 @@
 #    By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 12:44:04 by aorynbay          #+#    #+#              #
-#    Updated: 2024/06/28 18:35:07 by aorynbay         ###   ########.fr        #
+#    Updated: 2024/07/02 16:01:44 by aorynbay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# how to test cases memmove?
-# check memchr
-# check strlcat & strlcpy
-# check strnstr
-# shorten ft_strjoin
-# fix ft_strtrim
+# how does free() work in ft_split?
+
 
 SRCS	=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c ft_memset.c ft_split.c ft_strchr.c ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strmapi.c ft_strncmp.c ft_strnstr.c ft_strrchr.c ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c
 		
