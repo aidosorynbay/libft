@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/28 10:44:54 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 16:02:50 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/03 19:00:04 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,10 +126,7 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	result[word_count] = NULL;
 	if (malloc_for_each_str(result, s, c) == NULL)
-	{
-		free(result);
 		return (NULL);
-	}
 	result = allocate_chars(result, s, c);
 	return (result);
 }
