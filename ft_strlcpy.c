@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:10:01 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:22:50 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:19:32 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		dst[i] = src[i];
 		i++;
 	}
-	if (dstsize > 0)
+	if (i < dstsize)
 	{
 		dst[i] = '\0';
 	}

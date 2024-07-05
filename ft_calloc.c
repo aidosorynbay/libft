@@ -6,19 +6,19 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:14:46 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/03 18:45:46 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:47:57 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	char	*result;
 	size_t	prod;
 
-	prod = nmemb * size;
-	if (nmemb != 0 && (prod / nmemb != size))
+	prod = count * size;
+	if (count != 0 && (prod / count != size))
 		return (NULL);
 	result = malloc(prod);
 	if (result == NULL)

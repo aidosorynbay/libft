@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 17:24:54 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 17:31:53 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 01:13:25 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+
+// #include <unistd.h>
+// #include <string.h>
+
+// int main()
+// {
+// 	write (1, "25\n", strlen("25\n"));
+// 	return (0);
+// }

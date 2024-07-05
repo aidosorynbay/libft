@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:45:58 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/01 18:13:57 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:24:06 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 // #include <string.h>
 // int	main(void)
 // {
-// 	char str1[] = "Hello";
+// 	char str1[] = "Hellonyguyyoo";
 // 	char str2[] = "World";
 
 // 	size_t res = strlcat(str1, str2, 10);

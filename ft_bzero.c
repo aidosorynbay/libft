@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 14:41:54 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/06/28 15:19:45 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/05 23:44:37 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned char	*str;
-	size_t			i;
+	char	*str;
+	size_t	i;
 
-	str = (unsigned char *)s;
+	str = (char *)s;
 	i = 0;
 	if (n == 0)
 	{

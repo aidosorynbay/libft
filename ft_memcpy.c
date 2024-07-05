@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 16:52:06 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/01 18:12:47 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/05 23:57:36 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	while (i < n)
 	{
-		((unsigned char *)dst)[i] = ((unsigned char *)src)[i];
+		((char *)dst)[i] = ((char *)src)[i];
 		i++;
 	}
 	return (dst);

@@ -41,7 +41,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 // #include <stdio.h>
 // int main(void)
 // {
-//     char str1[] = "combine";
-//     char str2[] = " this";
-//     printf("%s\n", ft_strjoin(str1, str2));
+//     char str1[] = "";
+//     char str2[] = "";
+//     printf("|%s|\n", ft_strjoin(str1, str2));
 // }

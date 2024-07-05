@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 14:58:26 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/02 20:34:34 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 00:28:54 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strchr(const char *s, int c)
 // int	main(void)
 // {
 // 	char str[] = "https://www.tutorialspoint.com";
-// 	char ch = 'v';
+// 	char ch = '\0';
 // 	char *res = ft_strchr(str, ch);
 
 // 	printf("|%s|\n", res);
