@@ -6,16 +6,9 @@
 #    By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 12:44:04 by aorynbay          #+#    #+#              #
-#    Updated: 2024/07/06 06:25:23 by aorynbay         ###   ########.fr        #
+#    Updated: 2024/07/06 17:40:20 by aorynbay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
-
-# how does memmove work?
-# how does atoi return more than int range?
-# calloc mem overflow?
-# stdio.h in libft.h?
-# sep .h for bonus
-# difference between *lst & lst->content lstdelone
 
 SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 				ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c ft_memcmp.c ft_memcpy.c ft_memmove.c \

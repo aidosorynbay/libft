@@ -6,7 +6,7 @@
 /*   By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/24 15:36:24 by aorynbay          #+#    #+#             */
-/*   Updated: 2024/07/01 18:11:32 by aorynbay         ###   ########.fr       */
+/*   Updated: 2024/07/06 17:32:31 by aorynbay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	ft_atoi(const char *str)
 // #include <stdio.h>
 // int	main(void)
 // {
-// 	char str[] = "-9223372036854775899";
+// 	char str[] = "9223372036854775806";
 // 	printf("%i\n", atoi(str));
 // 	printf("%i\n", ft_atoi(str));
 // }
