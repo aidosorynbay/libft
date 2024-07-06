@@ -6,7 +6,7 @@
 #    By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 12:44:04 by aorynbay          #+#    #+#              #
-#    Updated: 2024/07/06 17:40:20 by aorynbay         ###   ########.fr        #
+#    Updated: 2024/07/06 17:49:10 by aorynbay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ OBJS		= 	${SRCS:.c=.o}
 BONUS		=	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
 				ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
-BONUS_OBJS	=	$(BONUS:.c=.o)
+BONUS_OBJS	=	${BONUS:.c=.o}
 
 CC		= cc
 
@@ -48,7 +48,7 @@ fclean:	clean
 
 re:	fclean ${NAME}
 
-bonus:	$(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:	${OBJS} ${BONUS_OBJS}
+	ar rcs ${NAME} ${OBJS} ${BONUS_OBJS}
 
 .PHONY: all clean fclean re bonus
