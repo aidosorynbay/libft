@@ -6,7 +6,7 @@
 #    By: aorynbay <@student.42abudhabi.ae>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/24 12:44:04 by aorynbay          #+#    #+#              #
-#    Updated: 2024/07/06 06:13:55 by aorynbay         ###   ########.fr        #
+#    Updated: 2024/07/06 06:25:23 by aorynbay         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@
 # calloc mem overflow?
 # stdio.h in libft.h?
 # sep .h for bonus
-# go over bonus functions one more time
 # difference between *lst & lst->content lstdelone
 
 SRCS		=	ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
